@@ -39,3 +39,23 @@ let myObj = {
 const myFunction = function () {
     console.log("Hello world!")
 }
+
+
+
+//******************** Stacck and Heap Memory *************//
+//stack => stack me data ka copy banta hai and prmitive datatypes stack me store hoti hai
+let myname = "Gulshan"
+let anotherName = myname
+anotherName = "Rajendra"
+console.log(anotherName);
+
+//object=> object me data ka reference banta hai and non primitive dataType Heap me store hota hai
+let userOne = {
+    email: "gulu@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "google@gmail.com"
+console.log(userTwo.email)
+console.log(userOne.email)
