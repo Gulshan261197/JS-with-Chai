@@ -41,5 +41,13 @@ const course = {
     price: "999",
     courseInstructor: "Gulshan"
 }
-console.log();
-//const {coursename}=course
+//console.log(courseInstructor);
+const { coursename, courseInstructor } = course// aise v object k attribute ko assign kr k print krate hai
+console.log(courseInstructor)
+
+
+
+
+//++++++++++++++ Object De-Structure +++++++++++++++++++++++++
+const { coursename: cname } = course//aise de-structure krte hai destrucuture means colon(:) laga kr new dete hai or access krte hai
+console.log(cname);
