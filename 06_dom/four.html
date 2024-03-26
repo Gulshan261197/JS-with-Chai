@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom || Chai aur Code</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+
+    </ul>
+    <script>
+        // function addLanguage(langName) {
+        //     const li = document.createElement('li')
+        //     li.innerHTML = `${langName}`
+        //     document.querySelector('.language').appendChild(li)
+
+
+        // }
+        // addLanguage("Python")
+        // addLanguage("Java")
+
+
+        //note=> upar wale function se v element add ho jayega but if using "innerHTML" then it is traverse whole tree so 
+        //its not a optimize solution below function is optimized solution
+
+        const addOptiLanguage = (lang) => {
+            const li = document.createElement("li")
+            li.appendChild(document.createTextNode(lang))
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptiLanguage("Java")
+        addOptiLanguage("Python")
+
+        //How to ediit
+        const secondLang = document.querySelector('li:nth-child(2)')
+        const newli = document.createElement("li")
+        newli.textContent = "Mojo"
+        secondLang.replaceWith(newli)
+
+        //remove
+        const lastLang = document.querySelector("li:last-child")
+        lastLang.remove()
+
+        //nth-child()=> is not a feature of JavaScript; it's actually a CSS pseudo-class selector. It's used to select elements based on their position within a parent element
+
+    </script>
+
+</body>
+
+</html>
