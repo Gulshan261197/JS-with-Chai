@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const naam = () => {
+        console.log("Gulshan kumar singh");
+    }
+
+    const changeH1Text = () => {
+        document.querySelector('h1').innerHTML = "best Js  Series"
+
+
+    }
+    //setTimeout(naam, 5000)
+    const changeme = setTimeout(changeH1Text, 2000)
+    document.getElementById('stop').addEventListener('click', () => {
+        clearTimeout(changeme);
+        console.log('STOPPED');
+    })
+    //clearTimeout=>you want stop the execution of setTimeout then you can use this
+
+</script>
+
+</html>
